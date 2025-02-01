@@ -20,17 +20,6 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 - Windows 10</b> (21H2)
 
-<h2>List of Prerequisites</h2>
-
-- Create oSTicket VM in Azure
-- Item 2
-- Item 3
-- Item 4
-- Item 5
--
--
--
-
 
 <h2>Installation Steps</h2>
 
@@ -131,8 +120,7 @@ Password: root
 
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
+Open IIS as an Admin
 <br />
 
 <p>
@@ -140,34 +128,24 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Register PHP from within IIS and then Reload IIS (Open IIS, Stop and Start the server)
+
 </p>
 <br />
 
 <p>
 <img width="477" alt="image" src="https://github.com/user-attachments/assets/2fb5a81f-6608-4b6d-9e1e-a505bb434f70" />
-
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
 <img width="475" alt="image" src="https://github.com/user-attachments/assets/83c9ecdd-3036-40f8-80fa-e5fc84fc456e" />
-
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
 <img width="295" alt="image" src="https://github.com/user-attachments/assets/cf28af4b-b5ce-4d1d-93f4-a1854a9767b7" />
 
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Install osTicket v1.15.8
+From the “osTicket-Installation-Files” folder,unzip “osTicket-v1.15.8.zip” 
+
+and copy the “upload” folder into “c:\inetpub\wwwroot”
+
+Within “c:\inetpub\wwwroot”, Rename “upload” to “osTicket”
 </p>
 <br />
 
@@ -176,7 +154,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Reload IIS (Open IIS, Stop and Start the server)
 </p>
 <br />
 
@@ -185,25 +163,30 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Go to sites -> Default -> osTicket
+On the right, click “Browse *:80”
 </p>
 <br />
 
 <p>
 <img width="348" alt="image" src="https://github.com/user-attachments/assets/981beda0-eafa-466f-bfb0-33de94a598cd" />
-
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
 <img width="325" alt="image" src="https://github.com/user-attachments/assets/bfd9141f-c5e7-4243-aed5-ab8748330031" />
-
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Note that some extensions are not enabled
+
+Go back to IIS, sites -> Default -> osTicket
+Double-click PHP Manager
+Click “Enable or disable an extension”
+
+Enable: php_imap.dll
+
+Enable: php_intl.dll
+
+Enable: php_opcache.dll
+
+Refresh the osTicket site in your browser, observe the changes
+
 </p>
 <br />
 
@@ -212,25 +195,26 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Rename: ost-config.php
+
+From: C:\inetpub\wwwroot\osTicket\include\ost-sampleconfig.php
+
+To: C:\inetpub\wwwroot\osTicket\include\ost-config.php
 </p>
 <br />
 
 <p>
 <img width="578" alt="image" src="https://github.com/user-attachments/assets/66b178f8-210b-482a-a471-952e637e4b61" />
-
+<img width="575" alt="image" src="https://github.com/user-attachments/assets/78708a0a-c95d-49b7-bba5-90897c6d5274" />
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+Assign Permissions: ost-config.php
 
-<p>
-<<img width="575" alt="image" src="https://github.com/user-attachments/assets/78708a0a-c95d-49b7-bba5-90897c6d5274" />
+Disable inheritance -> Remove All
 
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+New Permissions -> Everyone -> All
+
+For lab purposes, I put permissions for everyone. In the real world, DO NOT assign everyone perms.
 </p>
 <br />
 
@@ -242,7 +226,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Install HeidiSQL
+  
+Open Heidi SQL
+
+Create a new session, root/root
+
+Connect to the session
+
+Create a database called “osTicket”
+
 </p>
 <br />
 
@@ -252,6 +245,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 </p>
 <p>
-YAYYYYYYY IT'S INSTALLED 
+After it's installed, you are able to sign in and view tickets :)
 </p>
 <br />
